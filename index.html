@@ -1,135 +1,379 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Roopesh Rao S | Software Engineer</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f7fa;
-            color: #333;
-        }
-        header {
-            background: #111827;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        h2 {
-            color: #111827;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
-        .skills span {
-            display: inline-block;
-            background: #e5e7eb;
-            padding: 8px 12px;
-            margin: 5px;
-            border-radius: 6px;
-            font-size: 14px;
-        }
-        .project {
-            margin-bottom: 20px;
-        }
-        footer {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roopesh Rao S – Senior Software Engineer</title>
+  <meta name="description" content="Portfolio of Roopesh Rao S – Senior Software Engineer specializing in Kony Infinity, enterprise banking, Java, and full-stack development."/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-<header>
-    <h1>Roopesh Rao S</h1>
-    <p>Software Engineer | Java | Spring Boot | Full Stack Developer</p>
-</header>
+  <!-- Custom Cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        I am a Software Engineer with 4+ years of experience building scalable backend systems 
-        and full-stack applications. I specialize in Java and Spring Boot, with strong expertise 
-        in REST API development, database design, authentication, and enterprise-level application architecture.
-    </p>
-</section>
+  <!-- Animated Canvas Background -->
+  <canvas id="canvas-bg"></canvas>
 
-<section>
-    <h2>Experience</h2>
-    <p><strong>Software Engineer</strong> – Koreminds.AI (Current)</p>
+  <!-- Navigation -->
+  <nav>
+    <a href="#hero" class="logo">Roopesh<span>.</span></a>
     <ul>
-        <li>Designing and developing scalable REST APIs using Spring Boot</li>
-        <li>Backend architecture and database integration</li>
-        <li>Building and maintaining enterprise applications</li>
-        <li>Performance optimization and production issue handling</li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
+  </nav>
 
-    <p><strong>Software Engineer</strong> – Orion Innovation</p>
-    <ul>
-        <li>Backend service development</li>
-        <li>API design and integration</li>
-        <li>Enterprise banking application development</li>
-    </ul>
+  <!-- ════════════════════════════════
+       HERO
+  ════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-noise"></div>
+    <div class="particles" id="particles"></div>
 
-    <p><strong>Associate Engineer</strong> – Nagarro</p>
-    <ul>
-        <li>Backend development and integration services</li>
-    </ul>
-</section>
+    <div class="container" style="position:relative;z-index:2">
+      <div class="sec-eyebrow" style="animation:fadeUp 0.8s 0.2s both">
+        <div class="sec-line"></div>
+        <span class="sec-label">Available for opportunities</span>
+      </div>
 
-<section>
-    <h2>Technical Skills</h2>
-    <div class="skills">
-        <span>Java</span>
-        <span>Spring Boot</span>
-        <span>REST APIs</span>
-        <span>React.js</span>
-        <span>JavaScript</span>
-        <span>MySQL</span>
-        <span>MongoDB</span>
-        <span>Git</span>
-        <span>HTML & CSS</span>
-    </div>
-</section>
+      <div style="animation:fadeUp 0.8s 0.3s both;margin-bottom:0.6rem;position:relative;display:inline-block">
+        <h1 class="glitch">Roopesh Rao S</h1>
+        <div class="glitch-clone c1" aria-hidden="true">Roopesh Rao S</div>
+        <div class="glitch-clone c2" aria-hidden="true">Roopesh Rao S</div>
+      </div>
 
-<section>
-    <h2>Projects</h2>
+      <div class="typewriter" id="typewriter" style="animation:fadeUp 0.8s 0.4s both;display:block"></div>
 
-    <div class="project">
-        <strong>DevInsight</strong>
-        <p>Backend-focused application demonstrating clean architecture, API design, and integration handling.</p>
+      <p class="hero-sub">Building secure, high-performance enterprise banking applications with over 4 years of expertise in full-stack development, Kony Infinity, and emerging fintech technologies.</p>
+
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Get in Touch</a>
+        <a href="#projects" class="btn-outline">View Projects</a>
+      </div>
+
+      <div class="hero-meta">
+        <div class="hero-stat"><div class="num" id="count1">0</div><div class="lbl">Years Experience</div></div>
+        <!-- count1 animates to 4+ in main.js -->
+        <div class="hero-stat"><div class="num" id="count2">0</div><div class="lbl">Companies</div></div>
+        <div class="hero-stat"><div class="num" id="count3">0</div><div class="lbl">Banking Apps</div></div>
+      </div>
     </div>
 
-    <div class="project">
-        <strong>Spring Boot REST API Application</strong>
-        <p>Secure REST APIs with authentication, validation, database integration, and exception handling.</p>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
     </div>
+  </section>
 
-</section>
+  <!-- ════════════════════════════════
+       ABOUT
+  ════════════════════════════════ -->
+  <section id="about" class="section-wrap">
+    <div class="container">
+      <div class="sec-eyebrow reveal"><div class="sec-line"></div><span class="sec-label">About Me</span></div>
+      <h2 class="reveal">Who I <span>am</span></h2>
 
-<section>
-    <h2>Contact</h2>
-    <p>Email: roopeshraos7@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/roopeshraos7" target="_blank">github.com/roopeshraos7</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/roopeshraos7/" target="_blank">linkedin.com/in/roopeshraos7</a></p>
-</section>
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <p>I'm a Senior Software Engineer based in Mysuru, Karnataka with over 4 years of experience in enterprise banking application development. I specialise in Kony Infinity (Visualizer + Fabric), full-stack development, and secure backend integrations.</p>
+          <p>Currently at Koreminds India Pvt. Ltd. as a Technical Consultant, I'm expanding my expertise into T24 core banking, Python, AI/ML, and refreshing my Java Spring Boot skills — bridging traditional banking technology with modern engineering practices.</p>
+          <p>I have a proven track record of delivering production-ready mobile and web banking apps across Android and iOS, including handling 3rd-party NFI authentication, responsive UI across 4 breakpoints, and Java-based backend services.</p>
+        </div>
+        <div class="about-highlights reveal-right">
+          <div class="highlight-card">
+            <div class="hl-icon">🏦</div>
+            <h4>Banking Domain Expertise</h4>
+            <p>Deep experience in enterprise banking apps across multiple countries and platforms.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="hl-icon">⚡</div>
+            <h4>Full-Stack Capability</h4>
+            <p>Frontend (Kony Visualizer, React) meets backend (Kony Fabric, Java, Spring Boot).</p>
+          </div>
+          <div class="highlight-card">
+            <div class="hl-icon">🚀</div>
+            <h4>Currently Upskilling</h4>
+            <p>Training in T24, Python, and AI — bridging fintech with modern engineering.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-    © 2026 Roopesh Rao S | Built with GitHub Pages
-</footer>
+  <!-- ════════════════════════════════
+       EXPERIENCE
+  ════════════════════════════════ -->
+  <section id="experience" class="section-wrap">
+    <div class="container">
+      <div class="sec-eyebrow reveal"><div class="sec-line"></div><span class="sec-label">Career</span></div>
+      <h2 class="reveal">Work <span>Experience</span></h2>
+
+      <div class="timeline">
+        <div class="tl-track"><div class="tl-track-line"></div></div>
+
+        <!-- Koreminds -->
+        <div class="tl-item current reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-header">
+            <div class="tl-role">Technical Consultant</div>
+            <div class="tl-date">Feb 2026 – Present</div>
+          </div>
+          <div class="tl-company">Koreminds India Pvt. Ltd. · Mysuru, Karnataka</div>
+          <ul class="tl-desc">
+            <li>Receiving specialised training in T24 core banking platform and its integration patterns.</li>
+            <li>Building Python and AI/ML capabilities to complement existing enterprise banking expertise.</li>
+            <li>Refreshing and deepening Java Spring Boot skills for modern microservices architecture.</li>
+          </ul>
+        </div>
+
+        <!-- Orion SSE -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-header">
+            <div class="tl-role">Senior Software Engineer</div>
+            <div class="tl-date">Apr 2024 – Jan 2026</div>
+          </div>
+          <div class="tl-company">Orion Innovation · Chennai, India</div>
+          <ul class="tl-desc">
+            <li>Led full-stack development on the Madagascar Bank project built on Kony Infinity.</li>
+            <li>Implemented and maintained 3rd-party NFI authentication with periodic SDK upgrades.</li>
+            <li>Developed an entire onboarding version from scratch with complete end-to-end ownership.</li>
+            <li>Built Java services and postprocessors in Kony Fabric for secure backend operations.</li>
+            <li>Optimised UI performance and coordinated release activities for Android and iOS.</li>
+          </ul>
+        </div>
+
+        <!-- Orion SE -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-header">
+            <div class="tl-role">Software Engineer</div>
+            <div class="tl-date">Concurrent at Orion Innovation</div>
+          </div>
+          <div class="tl-company">Orion Innovation · Chennai, India</div>
+          <ul class="tl-desc">
+            <li>Frontend development using Kony Visualizer across mobile and web (4 breakpoints).</li>
+            <li>Designed layouts, reusable components, and workflows for smooth cross-device UX.</li>
+            <li>Delivered multiple production releases on Android and iOS ensuring store compliance.</li>
+            <li>Collaborated with backend and design teams for seamless API integration.</li>
+          </ul>
+        </div>
+
+        <!-- Nagarro -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-header">
+            <div class="tl-role">Associate Engineer</div>
+            <div class="tl-date">Apr 2022 – Feb 2024</div>
+          </div>
+          <div class="tl-company">Nagarro Software Pvt. Ltd. · Mysuru, Karnataka</div>
+          <ul class="tl-desc">
+            <li>Backend development for Myanmar Bank project using Kony Fabric V9SP3.</li>
+            <li>Developed Java services, preprocessors, and postprocessors for Account Dashboard and Transfers.</li>
+            <li>Implemented Spotlight modules: Terms & Conditions, Privacy Policy, Transaction History.</li>
+            <li>Wrote stored procedures for transaction data and optimised database performance.</li>
+          </ul>
+        </div>
+
+        <!-- Techmill -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-header">
+            <div class="tl-role">Software Engineer Intern</div>
+            <div class="tl-date">Jan 2022 – Mar 2022</div>
+          </div>
+          <div class="tl-company">Techmill Technologies · Mysuru, Karnataka</div>
+          <ul class="tl-desc">
+            <li>Learned Kony Fabric backend development and core Java fundamentals.</li>
+            <li>Worked on sample backend integration tasks and service configuration.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       SKILLS
+  ════════════════════════════════ -->
+  <section id="skills" class="section-wrap">
+    <div class="container">
+      <div class="sec-eyebrow reveal"><div class="sec-line"></div><span class="sec-label">Technical Skills</span></div>
+      <h2 class="reveal">What I <span>work with</span></h2>
+
+      <div class="skills-grid">
+        <div class="skill-cat reveal">
+          <h4>Languages</h4>
+          <div class="skill-tags">
+            <span class="tag violet">Java</span>
+            <span class="tag violet">JavaScript</span>
+            <span class="tag violet">Python</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <h4>Frameworks &amp; Platforms</h4>
+          <div class="skill-tags">
+            <span class="tag cyan">Kony Infinity</span>
+            <span class="tag cyan">Kony Fabric</span>
+            <span class="tag cyan">Spring Boot</span>
+            <span class="tag cyan">React.js</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <h4>Web &amp; Database</h4>
+          <div class="skill-tags">
+            <span class="tag muted">HTML</span>
+            <span class="tag muted">CSS</span>
+            <span class="tag muted">MySQL</span>
+            <span class="tag muted">MongoDB</span>
+            <span class="tag muted">SQLyog</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <h4>Tools &amp; Libraries</h4>
+          <div class="skill-tags">
+            <span class="tag muted">Git</span>
+            <span class="tag muted">Bitbucket</span>
+            <span class="tag muted">SourceTree</span>
+            <span class="tag muted">NumPy</span>
+            <span class="tag muted">Pandas</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <h4>Currently Learning</h4>
+          <div class="skill-tags">
+            <span class="tag violet">T24 Core Banking</span>
+            <span class="tag pink">AI / ML</span>
+            <span class="tag cyan">Spring Boot (adv.)</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <h4>Domain</h4>
+          <div class="skill-tags">
+            <span class="tag cyan">Enterprise Banking</span>
+            <span class="tag muted">NFI Auth</span>
+            <span class="tag muted">Android / iOS</span>
+            <span class="tag muted">Responsive UI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       PROJECTS
+  ════════════════════════════════ -->
+  <section id="projects" class="section-wrap">
+    <div class="container">
+      <div class="sec-eyebrow reveal"><div class="sec-line"></div><span class="sec-label">Projects</span></div>
+      <h2 class="reveal">Featured <span>Work</span></h2>
+
+      <div class="projects-grid">
+        <div class="proj-card reveal-left">
+          <div class="proj-num">01 / PROJECT</div>
+          <h3>Madagascar Bank</h3>
+          <div class="proj-sub">Full-Stack · Production · Android &amp; iOS</div>
+          <p>Led end-to-end development of a full-featured banking application from scratch. Implemented responsive layouts across 4 breakpoints, integrated updated NFI authentication SDKs, and built secure Java backend services. Delivered multiple production releases ensuring compliance with banking security standards.</p>
+          <div class="proj-tech">
+            <span class="tag violet">Kony Fabric</span>
+            <span class="tag cyan">Kony Visualizer</span>
+            <span class="tag muted">Java</span>
+            <span class="tag muted">NFI Auth</span>
+            <span class="tag muted">Infinity 202401</span>
+          </div>
+        </div>
+
+        <div class="proj-card reveal-right">
+          <div class="proj-num">02 / PROJECT</div>
+          <h3>Myanmar Bank</h3>
+          <div class="proj-sub">Backend · Kony Fabric · Core Banking</div>
+          <p>Focused on backend services for Account Dashboard, Transfers, and Card Management modules. Implemented Spotlight modules including Terms &amp; Conditions, Privacy Policy, and Transaction History. Developed stored procedures for optimised data consistency and secure core banking integration.</p>
+          <div class="proj-tech">
+            <span class="tag violet">Kony Fabric V9SP3</span>
+            <span class="tag cyan">Java Services</span>
+            <span class="tag muted">MySQL</span>
+            <span class="tag muted">Infinity 202110</span>
+            <span class="tag muted">Spotlight</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       EDUCATION
+  ════════════════════════════════ -->
+  <section id="education" class="section-wrap">
+    <div class="container">
+      <div class="sec-eyebrow reveal"><div class="sec-line"></div><span class="sec-label">Education</span></div>
+      <h2 class="reveal">Academic <span>Background</span></h2>
+      <div class="edu-card reveal">
+        <div>
+          <h3>Master of Computer Applications (MCA)</h3>
+          <p>The National Institute of Engineering · Mysuru, Karnataka</p>
+        </div>
+        <div class="edu-year">2020 – 2022</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       CONTACT
+  ════════════════════════════════ -->
+  <section id="contact" class="section-wrap">
+    <div class="container">
+      <div class="contact-inner reveal">
+        <div class="contact-bg"></div>
+        <div class="sec-eyebrow" style="justify-content:center;margin-bottom:0.5rem">
+          <div class="sec-line"></div>
+          <span class="sec-label">Contact</span>
+          <div class="sec-line" style="background:linear-gradient(270deg,var(--accent2),transparent)"></div>
+        </div>
+        <h2 style="margin-bottom:0.75rem;position:relative">Let's <span>Connect</span></h2>
+        <p>Open to new opportunities, collaborations, and conversations about fintech and enterprise software.</p>
+
+        <div class="contact-links">
+          <!-- Email -->
+          <a href="mailto:roopeshraos7@gmail.com" class="contact-chip">
+            <svg class="chip-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+            </svg>
+            roopeshraos7@gmail.com
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/roopeshraos7/" target="_blank" rel="noopener" class="contact-chip">
+            <svg class="chip-icon" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/roopeshraos7" target="_blank" rel="noopener" class="contact-chip">
+            <svg class="chip-icon" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>&#169; 2026 &middot; ROOPESH RAO S &middot; BUILT WITH PASSION</footer>
+
+  <!-- JavaScript — loaded at end of body so DOM is ready -->
+  <script src="js/main.js"></script>
 
 </body>
 </html>
